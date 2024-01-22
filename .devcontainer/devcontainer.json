@@ -14,6 +14,7 @@
 		"--security-opt=apparmor:unconfined",
 		"--volume=/tmp/.X11-unix:/tmp/.X11-unix",
 		"--volume=/mnt/wslg:/mnt/wslg",
+		"--volume=/run/user/1000/gdm/Xauthority:/home/ros/.Xauthority",
 		"--gpus=all"
 	],
 	"containerEnv": {

@@ -7,7 +7,7 @@ repositories:
   rmf_demos:
     type: git
     url: https://github.com/open-rmf/rmf_demos.git
-    version: 2.0.3
+    version: 2.2.0
   rmf-web:
     type: git
     url: https://github.com/open-rmf/rmf-web.git
