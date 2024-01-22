@@ -6,16 +6,25 @@
 			"WORKSPACE": "${containerWorkspaceFolder}"
 		}
 	},
+	"features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {}
+	},
 	"remoteUser": "ros",
+	"capAdd":  [
+		"SYS_PTRACE"
+	],
+	"securityOpt": [
+		"seccomp=unconfined",
+		"apparmor=unconfined"
+	],
 	"runArgs": [
 		"--network=host",
-		"--cap-add=SYS_PTRACE",
-		"--security-opt=seccomp:unconfined",
-		"--security-opt=apparmor:unconfined",
-		"--volume=/tmp/.X11-unix:/tmp/.X11-unix",
-		"--volume=/mnt/wslg:/mnt/wslg",
-		"--volume=/run/user/1000/gdm/Xauthority:/home/ros/.Xauthority",
 		"--gpus=all"
+	],
+	"mounts": [
+		{ "source": "/tmp/.X11-unix", "target": "/tmp/.X11-unix", "type": "bind" },
+		{ "source": "${localEnv:HOME}/.Xauthority", "target": "/home/ros/.Xauthority", "type": "bind" },
+		{ "source": "${localWorkspaceFolder}/gazebo_cache/", "target": "/home/ros/.ignition/fuel/fuel.gazebosim.org", "type": "bind" }
 	],
 	"containerEnv": {
 		"DISPLAY": "${localEnv:DISPLAY}", // Needed for GUI try ":0" for windows

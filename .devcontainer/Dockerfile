@@ -7,7 +7,7 @@ RUN apt-get update \
    && apt-get -y install --no-install-recommends  \
    python3-pip wget lsb-release gnupg curl python3-colcon-mixin ros-dev-tools \ 
    ignition-fortress \
-   ros-humble-rmf-dev \
+   ros-iron-rmf-dev \
    python3-venv \
    #
    # Clean up
@@ -23,6 +23,10 @@ RUN pip install flask-socketio fastapi uvicorn pipenv
 # Set up auto-source of workspace for ros user
 ARG WORKSPACE
 RUN echo "if [ -f ${WORKSPACE}/install/setup.bash ]; then source ${WORKSPACE}/install/setup.bash; fi" >> /home/ros/.bashrc
+
+# # setup gazebo / ignition model cache to be persistent over docker rebuilds
+# RUN mkdir -p /home/ros/.ignition/fuel/fuel.gazebosim.org && \
+#     chown -R ros:ros /home/ros/.ignition/fuel/fuel.gazebosim.org
 
 ################
 # uncomment below for nvidia support

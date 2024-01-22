@@ -3,3 +3,8 @@ install/*
 log/*
 site/*
 src/*
+gazebo_cache/*
+.pnpm-store/
+.rmf_schedule_node.yaml
+log.css
+web_server.log
