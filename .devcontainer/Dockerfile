@@ -6,9 +6,15 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
    && apt-get -y install --no-install-recommends  \
    python3-pip wget lsb-release gnupg curl python3-colcon-mixin ros-dev-tools \ 
+   python3-venv \
+   git-lfs \
    ignition-fortress \
    ros-iron-rmf-dev \
-   python3-venv \
+   ros-iron-rviz2 \
+   ros-iron-joy \
+   ros-iron-gazebo-plugins \
+   ros-iron-teleop-twist-keyboard \
+   ros-iron-ros-ign-bridge \
    #
    # Clean up
    && apt-get autoremove -y \
