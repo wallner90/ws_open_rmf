@@ -15,6 +15,9 @@ RUN apt-get update \
    ros-iron-gazebo-plugins \
    ros-iron-teleop-twist-keyboard \
    ros-iron-ros-ign-bridge \
+   ros-iron-image-transport-plugins \
+   ros-iron-robot-localization \
+   ros-iron-topic-tools \
    #
    # Clean up
    && apt-get autoremove -y \
