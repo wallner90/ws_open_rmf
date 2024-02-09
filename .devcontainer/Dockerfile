@@ -1,4 +1,4 @@
-FROM althack/ros2:iron-cuda-dev 
+FROM althack/ros2:humble-cuda-dev 
 
 # ** [Optional] Uncomment this section to install additional packages. **
 #
@@ -9,15 +9,15 @@ RUN apt-get update \
    python3-venv \
    git-lfs \
    ignition-fortress \
-   ros-iron-rmf-dev \
-   ros-iron-rviz2 \
-   ros-iron-joy \
-   ros-iron-gazebo-plugins \
-   ros-iron-teleop-twist-keyboard \
-   ros-iron-ros-ign-bridge \
-   ros-iron-image-transport-plugins \
-   ros-iron-robot-localization \
-   ros-iron-topic-tools \
+   ros-humble-rmf-dev \
+   ros-humble-rviz2 \
+   ros-humble-joy \
+   ros-humble-gazebo-plugins \
+   ros-humble-teleop-twist-keyboard \
+   ros-humble-ros-ign-bridge \
+   ros-humble-image-transport-plugins \
+   ros-humble-robot-localization \
+   ros-humble-topic-tools \
    #
    # Clean up
    && apt-get autoremove -y \
