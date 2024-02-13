@@ -4,13 +4,13 @@
 # Example:
 ############
 repositories:
-  rmf_demos:
-    type: git
-    #url: https://github.com/open-rmf/rmf_demos.git
-    url: https://github.com/wallner90/rmf_demos.git
+  #rmf_demos:
+  #  type: git
+  #  url: https://github.com/open-rmf/rmf_demos.git
+    # url: https://github.com/wallner90/rmf_demos.git
     # 2.2.3 has an error in airport_terminal.launch.xml
-    version: main
-  rmf-web:
-    type: git
-    url: https://github.com/open-rmf/rmf-web.git
-    version: main
+  #  version: galactic
+  #rmf-web:
+  #  type: git
+  #  url: https://github.com/open-rmf/rmf-web.git
+  # version: galactic

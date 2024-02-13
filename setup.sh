@@ -3,8 +3,9 @@ set -e
 
 vcs import < src/ros2.repos src
 sudo apt-get update
-rosdep update
-rosdep install --from-paths src --ignore-src -y
+rosdep update --include-eol-distros
+rosdep install --from-paths src --ignore-src -y --rosdistro galactic --
+
 
 # install nodejs
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash

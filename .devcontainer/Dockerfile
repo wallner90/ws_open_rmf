@@ -1,4 +1,4 @@
-FROM althack/ros2:humble-cuda-dev 
+FROM althack/ros2:galactic-cuda-dev 
 
 # ** [Optional] Uncomment this section to install additional packages. **
 #
@@ -9,15 +9,14 @@ RUN apt-get update \
    python3-venv \
    git-lfs \
    ignition-fortress \
-   ros-humble-rmf-dev \
-   ros-humble-rviz2 \
-   ros-humble-joy \
-   ros-humble-gazebo-plugins \
-   ros-humble-teleop-twist-keyboard \
-   ros-humble-ros-ign-bridge \
-   ros-humble-image-transport-plugins \
-   ros-humble-robot-localization \
-   ros-humble-topic-tools \
+   ros-galactic-rviz2 \
+   ros-galactic-joy \
+   ros-galactic-gazebo-plugins \
+   ros-galactic-teleop-twist-keyboard \
+   ros-galactic-ros-ign-bridge \
+   ros-galactic-image-transport-plugins \
+   ros-galactic-robot-localization \
+   ros-galactic-topic-tools \
    #
    # Clean up
    && apt-get autoremove -y \
